@@ -15,11 +15,7 @@
 	border-color-2: #21262d
 	color: #c9d1d9
 	disabled-color: #6e7681
-	
-	
 
-
-    
     selection-color: rgba(56,139,253,0.4)
 
     alert-btn-bg: #1f6feb
@@ -51,6 +47,8 @@ QToolButton {
 QWidget { color: #c9d1d9; }
 QWidget::disabled { color: #6e7681; }
 QWidget:floatable QWidget:window { background-color: #0d1117; }
+QWidget:floatable { background-color: #0d1117; }
+QDockWidget { background-color: #0d1117; }
 
 /* Common */
 /* remove outline */
@@ -354,7 +352,6 @@ QAbstractSpinBox::down-button:pressed {
 QPushButton:disabled,
 QAbstractSpinBox::up-button:disabled,
 QAbstractSpinBox::down-button:disabled {
-  background-color: purple;
   border-color: #30363d; }
 
 QPushButton::menu-indicator {
@@ -505,7 +502,7 @@ QScrollBar::handle:pressed {
   background: #787878; }
 
 QScrollBar::handle:disabled {
-  background: purple; }
+  background: transparent; }
 
 QScrollBar::add-page,
 QScrollBar::sub-page {
@@ -671,9 +668,6 @@ QTabWidget::pane {
   border-style: solid;
   border-width: 1px; }
 
-QTabWidget::pane:disabled {
-  border-top-color: purple; }
-
 /*QTabWidget::tab-bar { }*/
 QTabBar::tab {
   background-color: transparent;
@@ -688,11 +682,7 @@ QTabBar::tab:selected:hover {
   background-color: #388bfd; }
 
 QTabBar::tab:disabled {
-  background-color: transparent;
-  color: purple; }
-
-QTabBar::tab:selected:disabled {
-  background-color: purple; }
+  background-color: transparent; }
 
 /* Scrollers */
 QTabBar QToolButton {
