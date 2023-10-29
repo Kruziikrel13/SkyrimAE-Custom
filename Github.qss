@@ -28,7 +28,6 @@
 	focus-color: #58a6ff
 */
 
-
 QMainWindow { background: qradialgradient(cx: 0.5, cy: 0, radius: 0.6, fx: 0.4, fy: 0, stop: 0 #0c0c1b, stop:1 #010409); }
 
 /* For some reason applying background-color or border fixes paddings properties */
@@ -48,6 +47,7 @@ QWidget { color: #c9d1d9; }
 QWidget::disabled { color: #6e7681; }
 QWidget:floatable QWidget:window { background-color: #0d1117; }
 QWidget:floatable { background-color: #0d1117; }
+QWidget:floatable QWidget:window > QFrame { background-color: #0d1117; }
 QDockWidget { background-color: #0d1117; }
 
 /* Common */
@@ -68,7 +68,8 @@ QTreeView#modList::item,
 QTreeWidget#categoriesTree::item,
 #savegameList::item,
 #tabConflicts QTreeWidget::item {
-  padding: 0.3em 0; }
+  padding: 0.3em 0; 
+  }
 
 QListView::item,
 QTreeView#espList::item {
@@ -630,8 +631,8 @@ QMenu QRadioButton {
 /* Tool tips #QToolTip, #SaveGameInfoWidget */
 QToolTip,
 SaveGameInfoWidget {
-  background-color: purple;
-  border-color: #4D4D50;
+  background-color: #0d1117;
+  border-color: #30363d;
   color: #c9d1d9;
   border-style: solid;
   border-width: 1px;
@@ -641,7 +642,6 @@ QStatusBar::item {border: None;}
 
 /* Progress Bars (Downloads) #QProgressBar */
 QProgressBar {
-  background-color: purple;
   color: #000;
   border-color: #BCBCBC;
   text-align: center;
@@ -765,14 +765,14 @@ QDialog#QueryOverwriteDialog QPushButton {
   margin-left: .5em; }
 
 QDialog#PyCfgDialog QPushButton:hover {
-  background-color: red; }
+  background-color: purple; }
 
 QLineEdit#modFilterEdit {
   margin-top: 2px; }
 
 /* highlight unchecked BSAs */
 QWidget#bsaTab QTreeWidget::indicator:unchecked {
-  background-color: #3399FF; }
+  background-color: purple; }
 
 /* increase version text field */
 QLineEdit#versionEdit {
